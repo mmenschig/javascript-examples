@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plain JS - POST Request</title>
+
+  <!-- Bootstrap4 -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+  <!-- Header -->
+  <div class="container-fluid bg-primary p-2">
+    <div class="flex-row d-flex align-items-center">
+      <div>
+        <h1 class="text-light font-weight-bold align-top">Plain JavaScript Examples</h1>
+      </div>
+      <div>
+        <a href="../index.html" class="btn btn-outline-light ml-4">Home</a>
+        </div>
+      </div>
+    </div>
+
+  <div class="container mt-5">
+    <h1 class="display-4">HTTP Request</h1>
+    <form>
+      <div class="form-group">
+        <label for="inputUsername">Username</label>
+        <input type="text" class="form-control col-md-6" id="inputUsername" value="johndoe">
+      </div>
+      <div class="form-row">
+        <div class="col-md-3">
+          <label for="inputValue1">First value</label>
+          <input type="number" class="form-control" id="inputValue1" value="35">
+        </div>
+        <div class="col-md-3">
+          <label for="inputValue2">Second value</label>
+          <input type="number" class="form-control" id="inputValue2" value="42">
+        </div>
+      </div>
+      <div class="form-group">
+        <button id="buttonSubmit" type="submit" name="submit-button" class="btn btn-primary mt-4">Submit data</button><br>
+        <small class="text-small text-muted">Server waits 2 seconds before returning result</small>
+      </div>
+
+    </form>
+
+    <div class="row">
+      <div class="col">
+        <div class="spinner-border text-primary" id="loader" role="status" style="display: none">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <span class="text-muted" id="resultUsername"></span>
+      </div>
+      <div class="col">
+        <span class="text-muted" id="resultAddition"></span>
+      </div>
+      <div class="col">
+        <p class="result error" id="errorResult"></p>
+      </div>
+    </div>
+
+    <!-- Container used to display a Chart -->
+    <div class="output-container">
+      <canvas id="myChart"></canvas>
+    </div>
+  </div>
+</div>
+
+  <script src="../static/js/postRequest.js"></script>
+
+  <!-- Only used when chart is being rendered -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+</body>
+</html>
