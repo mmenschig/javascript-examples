@@ -52,7 +52,7 @@ function renderData(data) {
 }
 
 async function postData(requestData) {
-  const requestURL = 'http://127.0.0.1:5000/sample'
+  const requestURL = 'http://127.0.0.1:5000/simplePost'
 
   const response = await fetch(requestURL, {
     method: 'POST',
